@@ -1,0 +1,289 @@
+.app-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px 20px 36px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  border: 3px solid var(--black);
+  background: var(--yellow);
+  padding: 20px;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--black);
+}
+
+.header-topline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.network-badge {
+  border: 2px solid var(--black);
+  background: var(--orange);
+  color: var(--black);
+  padding: 2px 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 4px 0 10px;
+  font-size: clamp(1.8rem, 4vw, 3.1rem);
+  line-height: 1;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 64ch;
+}
+
+.panel {
+  margin-top: 18px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.grid-5 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.card {
+  border: 2px solid var(--black);
+  background: var(--white);
+  padding: 16px;
+}
+
+.card:nth-child(2n) {
+  background: #fffde8;
+}
+
+.card h2,
+.card h3 {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  border: 2px solid var(--black);
+  border-radius: 0;
+  padding: 10px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  background: #ffffff;
+  color: var(--black);
+}
+
+input:focus {
+  outline: 3px solid var(--blue);
+  outline-offset: 1px;
+}
+
+.btn {
+  border: 2px solid var(--black);
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+}
+
+.btn:active {
+  transform: translate(0, 0);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn.primary {
+  background: var(--green);
+}
+
+.btn.secondary {
+  background: var(--blue);
+}
+
+.btn.accent {
+  background: var(--pink);
+}
+
+.btn.warn {
+  background: var(--orange);
+}
+
+.mono {
+  font-family: var(--font-mono);
+  word-break: break-all;
+}
+
+.stats {
+  background: #fffced;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.stats-grid div {
+  border: 1px solid var(--black);
+  background: #ffffff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stats-grid span {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.stats-grid strong {
+  font-family: var(--font-mono);
+  font-size: 0.96rem;
+}
+
+.action-card {
+  background: #ffffff;
+}
+
+.hint {
+  margin: 12px 0 0;
+}
+
+.guide-card {
+  background: #f6fbff;
+}
+
+.guide-list {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.guide-list li {
+  line-height: 1.35;
+}
+
+.status-bar {
+  margin-top: 18px;
+  border: 2px solid var(--black);
+  background: var(--black);
+  color: var(--white);
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tabs-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  min-width: 140px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.dot.ok {
+  background: var(--green);
+}
+
+.dot.idle {
+  background: var(--orange);
+}
+
+@media (max-width: 980px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid-5 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .grid-5,
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
