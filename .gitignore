@@ -1,0 +1,61 @@
+# =========================
+# Monorepo global .gitignore
+# =========================
+
+# ---- OS / Editor ----
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+.vscode/
+.idea/
+
+# ---- Env / secrets ----
+.env
+.env.*
+!.env.example
+!example.env
+
+# ---- Logs ----
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---- Python / tooling ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---- Node / FrontEnd ----
+node_modules/
+dist/
+build/
+.next/
+.nuxt/
+.svelte-kit/
+coverage/
+
+# ---- Foundry / Solidity (global) ----
+out/
+cache/
+
+# Blockchain project specific outputs
+Blockchain/out/
+Blockchain/cache/
+Blockchain/.venv/
+Blockchain/.venv-fizz/
+Blockchain/coverage/
+Blockchain/*.lcov
+Blockchain/fizz_data/**
+
+# Foundry local/broadcast artifacts for local chain runs
+Blockchain/broadcast/*/31337/
+Blockchain/broadcast/**/dry-run/
+
+# Optional generated docs
+docs/
+Blockchain/docs/
