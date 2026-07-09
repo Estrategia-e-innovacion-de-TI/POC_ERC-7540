@@ -28,7 +28,7 @@ pnpm-debug.log*
 __pycache__/
 *.py[cod]
 .venv/
-.venv-fizz/
+.venv-fizz
 venv/
 
 # ---- Node / FrontEnd ----
