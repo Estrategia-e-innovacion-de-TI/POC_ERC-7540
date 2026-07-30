@@ -33,6 +33,10 @@ jobs:
           VITE_VAULT_ADDRESS: ${{ secrets.VITE_VAULT_ADDRESS }}
           VITE_VAULT7540_ADDRESS: ${{ secrets.VITE_VAULT7540_ADDRESS }}
           VITE_ASSET_ADDRESS: ${{ secrets.VITE_ASSET_ADDRESS }}
+          VITE_SEPOLIA_RPC_URL: ${{ secrets.VITE_SEPOLIA_RPC_URL }}
+          VITE_TURNKEY_ORGANIZATION_ID: ${{ secrets.VITE_TURNKEY_ORGANIZATION_ID }}
+          VITE_TURNKEY_AUTH_PROXY_CONFIG_ID: ${{ secrets.VITE_TURNKEY_AUTH_PROXY_CONFIG_ID }}
+          VITE_PIMLICO_API_KEY: ${{ secrets.VITE_PIMLICO_API_KEY }}
         run: npm run build
 
       - name: Deploy to GitHub Pages
