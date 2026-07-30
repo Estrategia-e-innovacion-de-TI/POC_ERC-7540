@@ -14,6 +14,30 @@
   padding: 20px;
 }
 
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+  max-width: 360px;
+}
+
+.gasless-badge {
+  background: var(--green);
+}
+
+.setup-hint {
+  background: #fff4e8;
+}
+
+.setup-error {
+  color: #8a1f11;
+  background: #ffe8e2;
+  border: 2px solid var(--black);
+  padding: 8px 10px;
+  margin-top: 10px;
+}
+
 .kicker {
   margin: 0;
   font-size: 0.9rem;
@@ -226,8 +250,40 @@ input:focus {
   color: var(--white);
   padding: 12px 14px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
+  position: sticky;
+  bottom: 12px;
+  z-index: 20;
+}
+
+.status-bar.status-pending {
+  background: #1f3a5f;
+}
+
+.status-bar.status-success {
+  background: #0f4d3a;
+}
+
+.status-bar.status-error {
+  background: #6b1d14;
+}
+
+.status-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.status-copy p {
+  margin: 0;
+  word-break: break-word;
+}
+
+.status-link a {
+  color: var(--yellow);
+  font-family: var(--font-mono);
 }
 
 .tabs-bar {
@@ -245,6 +301,7 @@ input:focus {
   height: 10px;
   border-radius: 999px;
   flex-shrink: 0;
+  margin-top: 5px;
 }
 
 .dot.ok {
@@ -253,6 +310,27 @@ input:focus {
 
 .dot.idle {
   background: var(--orange);
+}
+
+.dot.pending {
+  background: var(--blue);
+  animation: pulse-dot 1s ease-in-out infinite;
+}
+
+.dot.error {
+  background: #ff6b5a;
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
 }
 
 @media (max-width: 980px) {
