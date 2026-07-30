@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/lottie-react.esm-CFkjaDac.js","assets/index-421tr78q.js","assets/index-CRG7aNx4.css"])))=>i.map(i=>d[i]);
+import{aN as i,aO as t,_ as o}from"./index-421tr78q.js";function s(){return e.apply(this,arguments)}function e(){return e=i(t().m(function n(){var a;return t().w(function(r){for(;;)switch(r.n){case 0:return r.n=1,o(()=>import("./lottie-react.esm-CFkjaDac.js"),__vite__mapDeps([0,1,2]));case 1:return a=r.v,r.a(2,a.Player)}},n)})),e.apply(this,arguments)}export{s as getLottiePlayer};
